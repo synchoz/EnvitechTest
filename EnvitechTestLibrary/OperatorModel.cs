@@ -6,5 +6,11 @@ namespace EnvitechTestLibrary
 {
     public class OperatorModel
     {
+        public string Name { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
     }
 }

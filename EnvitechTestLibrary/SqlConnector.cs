@@ -11,11 +11,11 @@ namespace EnvitechTestLibrary
 {
     public class SqlConnector
     {
-        public List<string> LoadData<U>(string sqlStatement,U parameters)
+        public List<T> LoadData<T,U>(string sqlStatement,U parameters)//change for T
         {
             using (var connection = new SqlConnection(GlobalConfig.CnnString("test")))
             {
-                List<string> rows = connection.Query<string>(sqlStatement, parameters).ToList();
+                List<T> rows = connection.Query<T>(sqlStatement, parameters).ToList();
                 return rows;
             }
         }
@@ -30,5 +30,7 @@ namespace EnvitechTestLibrary
                 return table;
             }
         }
+
+        
     }
 }

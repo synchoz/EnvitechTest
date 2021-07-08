@@ -37,8 +37,8 @@ namespace EnvitechTestUI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.valueFieldBox = new System.Windows.Forms.ComboBox();
+            this.operatorBox = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
@@ -114,21 +114,21 @@ namespace EnvitechTestUI
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 7;
             // 
-            // comboBox1
+            // valueFieldBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(494, 166);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 8;
+            this.valueFieldBox.FormattingEnabled = true;
+            this.valueFieldBox.Location = new System.Drawing.Point(494, 166);
+            this.valueFieldBox.Name = "valueFieldBox";
+            this.valueFieldBox.Size = new System.Drawing.Size(121, 23);
+            this.valueFieldBox.TabIndex = 8;
             // 
-            // comboBox2
+            // operatorBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(494, 199);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 9;
+            this.operatorBox.FormattingEnabled = true;
+            this.operatorBox.Location = new System.Drawing.Point(494, 199);
+            this.operatorBox.Name = "operatorBox";
+            this.operatorBox.Size = new System.Drawing.Size(121, 23);
+            this.operatorBox.TabIndex = 9;
             // 
             // dateTimePicker1
             // 
@@ -151,8 +151,8 @@ namespace EnvitechTestUI
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.operatorBox);
+            this.Controls.Add(this.valueFieldBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -179,8 +179,8 @@ namespace EnvitechTestUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox valueFieldBox;
+        private System.Windows.Forms.ComboBox operatorBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button cl;

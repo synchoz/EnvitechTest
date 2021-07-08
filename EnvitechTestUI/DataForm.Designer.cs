@@ -29,8 +29,8 @@ namespace EnvitechTestUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.clearFormButton = new System.Windows.Forms.Button();
+            this.showButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,23 +43,24 @@ namespace EnvitechTestUI
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // button1
+            // clearFormButton
             // 
-            this.button1.Location = new System.Drawing.Point(494, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "נקה טופס";
-            this.button1.UseVisualStyleBackColor = true;
+            this.clearFormButton.Location = new System.Drawing.Point(494, 327);
+            this.clearFormButton.Name = "clearFormButton";
+            this.clearFormButton.Size = new System.Drawing.Size(75, 23);
+            this.clearFormButton.TabIndex = 0;
+            this.clearFormButton.Text = "נקה טופס";
+            this.clearFormButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // showButton
             // 
-            this.button2.Location = new System.Drawing.Point(613, 327);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "הצג";
-            this.button2.UseVisualStyleBackColor = true;
+            this.showButton.Location = new System.Drawing.Point(613, 327);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(75, 23);
+            this.showButton.TabIndex = 1;
+            this.showButton.Text = "הצג";
+            this.showButton.UseVisualStyleBackColor = true;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
             // label1
             // 
@@ -158,8 +159,8 @@ namespace EnvitechTestUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.showButton);
+            this.Controls.Add(this.clearFormButton);
             this.Name = "DataForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -170,8 +171,8 @@ namespace EnvitechTestUI
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button clearFButton;
+        private System.Windows.Forms.Button showButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -182,6 +183,9 @@ namespace EnvitechTestUI
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button cl;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button clearFormButton;
     }
 }
 

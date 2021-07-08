@@ -36,7 +36,7 @@ namespace EnvitechTestUI
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.valueTextBox = new System.Windows.Forms.TextBox();
             this.valueFieldBox = new System.Windows.Forms.ComboBox();
             this.operatorBox = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -51,6 +51,7 @@ namespace EnvitechTestUI
             this.clearFormButton.TabIndex = 0;
             this.clearFormButton.Text = "נקה טופס";
             this.clearFormButton.UseVisualStyleBackColor = true;
+            this.clearFormButton.Click += new System.EventHandler(this.clearFormButton_Click);
             // 
             // showButton
             // 
@@ -107,12 +108,12 @@ namespace EnvitechTestUI
             this.label5.TabIndex = 6;
             this.label5.Text = "ערך";
             // 
-            // textBox1
+            // valueTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(515, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 7;
+            this.valueTextBox.Location = new System.Drawing.Point(515, 230);
+            this.valueTextBox.Name = "valueTextBox";
+            this.valueTextBox.Size = new System.Drawing.Size(100, 23);
+            this.valueTextBox.TabIndex = 7;
             // 
             // valueFieldBox
             // 
@@ -153,7 +154,7 @@ namespace EnvitechTestUI
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.operatorBox);
             this.Controls.Add(this.valueFieldBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.valueTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -178,7 +179,7 @@ namespace EnvitechTestUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox valueTextBox;
         private System.Windows.Forms.ComboBox valueFieldBox;
         private System.Windows.Forms.ComboBox operatorBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

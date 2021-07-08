@@ -32,6 +32,8 @@ namespace EnvitechTestUI
             //load the dropdown Operators
             List<OperatorModel> operators = _db.LoadData<OperatorModel,dynamic>("SELECT Name FROM dbo.OPERATOR", new { });
             operatorBox.DataSource = operators;
+            valueFieldBox.Text = "";
+            operatorBox.Text = "";
         }
 
         private void showButton_Click(object sender, EventArgs e)
@@ -42,6 +44,15 @@ namespace EnvitechTestUI
             DataTable dataTable = _db.LoadData("select * from dbo.DATA");
             DataTableForm dataTableForm = new DataTableForm(dataTable);
             dataTableForm.ShowDialog();
+        }
+
+        private void clearFormButton_Click(object sender, EventArgs e)
+        {
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+            valueFieldBox.Text = "";
+            operatorBox.Text = "";
+            valueTextBox.Text = "";
         }
     }
 }

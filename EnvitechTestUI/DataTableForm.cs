@@ -18,36 +18,32 @@ namespace EnvitechTestUI
 
            
             InitializeComponent();
-            table.Columns.Add();
-            //tableDataGridView.Columns.Add("Time Stamp", "Time Stamp");
+            
             PopulateColumns(dataTable);
-            this.tableDataGridView.DataSource = table;
+            this.tableDataGridView.DataSource = dataTable;
         }
 
         private void PopulateColumns(List<List<string>> dataTable)
         {
             
-            int i = 1;
+            int i = 0;
             foreach (var data in dataTable)
             {
-/*                DataRow newRow = table.NewRow();
-                newRow["Time Stamp"] = 1;
-                newRow["Name"] = "John";*/
-                table.Rows.Add(newRow);
-                //this.tableDataGridView.Columns.Add("Value", $"Value{i}");
-                
-
-                foreach (var row in data)
+                if(i == 0)
                 {
-                    
-                    table.Rows.Add(row);
-                    table.Rows.InsertAt
+                    tableDataGridView.Columns.Add("Time Stamp", "Time Stamp");
                 }
-                table.Columns.Add();
+                else
+                {
+                    this.tableDataGridView.Columns.Add("Value", $"Value{i}");
+                }
+                
                 i++;
             }
 
-            
+           
+
+
         }
     }
 }

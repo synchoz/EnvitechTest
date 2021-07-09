@@ -20,6 +20,17 @@ namespace EnvitechTestLibrary
             }
         }
 
+        public DataTable LoadData<U>(string sqlStatement,U parameters)
+        {
+            using (var connection = new SqlConnection(GlobalConfig.CnnString("test")))
+            using (var adapter = new SqlDataAdapter(sqlStatement, connection))
+            {
+                var table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+        }
+
         public DataTable LoadData(string sqlStatement)
         {
             using (var connection = new SqlConnection(GlobalConfig.CnnString("test")))

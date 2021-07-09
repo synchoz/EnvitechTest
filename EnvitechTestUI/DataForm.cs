@@ -49,9 +49,11 @@ namespace EnvitechTestUI
             
             List<string> dataTable;
             List<List<string>> listsOfDataValues = new List<List<string>>();
+            string dateTime1 = $"{dateTimePicker1.Value.Year}-{dateTimePicker1.Value.Month}-{dateTimePicker1.Value.Day}";
+            string dateTime2 = $"{dateTimePicker2.Value.Year}-{dateTimePicker2.Value.Month}-{dateTimePicker2.Value.Day}";
             //dateTimePicker1.Value
             //dateTimePicker2.Value
-            string sqlStatement = $"select Date_Time from dbo.DATA where {fieldValue} {operatorName} {valueNumber} and Date_Time BETWEEN {dateTimePicker1.Value} and {dateTimePicker2.Value}";
+            string sqlStatement = $"select Date_Time from dbo.DATA where {fieldValue} {operatorName} {valueNumber} and Date_Time BETWEEN '{dateTime1}' and '{dateTime2}'";
             dataTable = _db.LoadData<string, dynamic>(sqlStatement, new { });
             listsOfDataValues.Add(dataTable);
             foreach (var field in dataField) //make a status change plus adding filter for dates
@@ -61,7 +63,8 @@ namespace EnvitechTestUI
             }
 
             //DataTableForm dataTableForm = new DataTableForm(dataTable);
-            //dataTableForm.ShowDialog();
+            DataTableForm dataTableForm = new DataTableForm(listsOfDataValues);
+            dataTableForm.ShowDialog();
         }
 
         private void clearFormButton_Click(object sender, EventArgs e)
